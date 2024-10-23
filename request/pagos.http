@@ -1,0 +1,10 @@
+@api = http://localhost:3020/api/v1/pagos
+#@api = http://187.229.22.99:8010/api/v1/prod-serv
+### GET
+GET {{api}}
+### GET ITEM
+GET {{api}}/
+### GET ITEM
+GET {{api}}/9001-1101-123456789012?keyType=OK
+### GET ITEM
+GET {{api}}/PT-55?keyType=BK
