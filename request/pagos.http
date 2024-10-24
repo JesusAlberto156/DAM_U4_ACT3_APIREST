@@ -8,3 +8,1112 @@ GET {{api}}/
 GET {{api}}/9001-1101-123456789012?keyType=OK
 ### GET ITEM
 GET {{api}}/PT-55?keyType=BK
+### POST ITEM
+POST {{api}}/
+Content-Type: application/json
+
+  {
+    "IdInstitutoOK": "9002",
+    "IdNegocioOK": "1101",
+    "IdPagoOK": "9002-1101-123456789012",
+    "IdPagoBK": "PT-60",
+    "IdOrdenOK": "9001-1101-100000000001",
+    "MontoTotal": 5000.34,
+    "Observacion": "Envio los mas rapido posible",
+    "info_ad": [
+      {
+        "IdEtiquetaOK": "",
+        "IdEtiqueta": "IdCondiciones",
+        "Etiqueta": "Condiciones de Pago",
+        "Valor": "Debe ser en una sola exhibición",
+        "IdTipoSeccionOK": "IdSeccionesPago-IdGeneral",
+        "Secuencia": 10,
+        "detail_row": {
+          "Activo": "S",
+          "Borrado": "N",
+          "detail_row_reg": [
+            {
+              "FechaReg": "2022-04-30T00:00:00.628Z",
+              "UsuarioReg": "FIBARRAC"
+            }
+          ]
+        }
+      },
+      {
+        "IdEtiquetaOK": "",
+        "IdEtiqueta": "IdCondicionesPago",
+        "Etiqueta": "Condiciones de Pago",
+        "Valor": "Debe ser en una sola exhibición",
+        "IdTipoSeccionOK": "IdSeccionesPago-IdGeneral",
+        "Secuencia": 10,
+        "detail_row": {
+          "Activo": "S",
+          "Borrado": "N",
+          "detail_row_reg": [
+            {
+              "FechaReg": "2022-04-30T00:00:00.628Z",
+              "UsuarioReg": "FIBARRAC"
+            }
+          ]
+        }
+      }
+    ],
+    "forma_pago": [
+      {
+        "IdTipoMetodoOK": "IdTipoMetodoPago-IdTarjeta",
+        "Monto": 500,
+        "IdTipoMonedaOK": "IdTipoMoneda-IdMXN",
+        "pago_tarjeta": {
+          "IdTipoTarjertaOK": "IdTipoPagoTarjeta-IdCredito",
+          "IdTipoRed": "IdTipoRedTarjeta-IdVISA",
+          "Banco": "Bancomer",
+          "NombreTitular": "Francico Ibarra C",
+          "Numero": "**** **** **** 1234",
+          "FechaVencimiento": "12/25",
+          "CodigoCVV": "123"
+        },
+        "datos_transaccion": {
+          "IdTransaccion": "txn_123456789",
+          "CodigoAutoriza": "AUTH-123456",
+          "FechaReg": "2022-04-04T00:00:00.628Z"
+        },
+        "estatus": [
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdEnProceso",
+            "Actual": "N",
+            "Observacion": "",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          },
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdDenegado",
+            "Actual": "N",
+            "Observacion": "",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          },
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdAprobado",
+            "Actual": "N",
+            "Observacion": "El pago ha sido procesado y los productos están siendo preparados para el envío.",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "IdTipoMetodoOK": "IdTipoMetodoPago-IdTarjeta",
+        "Monto": 200,
+        "IdTipoMonedaOK": "IdTipoMoneda-IdMXN",
+        "pago_tarjeta": {
+          "IdTipoTarjertaOK": "IdTipoPagoTarjeta-IdDebito",
+          "IdTipoRed": "IdTipoRedTarjeta-IdVISA",
+          "Banco": "Banamex",
+          "NombreTitular": "Francico Ibarra C",
+          "Numero": "**** **** **** 1234",
+          "FechaVencimiento": "12/25",
+          "CodigoCVV": "123"
+        },
+        "datos_transaccion": {
+          "IdTransaccion": "txn_123456789",
+          "CodigoAutoriza": "AUTH-123456",
+          "FechaReg": "2022-04-04T00:00:00.628Z"
+        },
+        "estatus": [
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdEnProceso",
+            "Actual": "N",
+            "Observacion": "",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          },
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdDenegado",
+            "Actual": "N",
+            "Observacion": "",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          },
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdAprobado",
+            "Actual": "N",
+            "Observacion": "",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "datos_transaccion": {
+          "FechaReg": "2024-10-24T02:57:20.824Z"
+        },
+        "IdTipoMetodoOK": "IdTipoMetodoPago-IdEfectivo",
+        "Monto": 300,
+        "IdTipoMonedaOK": "IdTipoMoneda-IdMXN",
+        "estatus": [
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdDenegado",
+            "Actual": "N",
+            "Observacion": "",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          },
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdAprobadoContraEntrega",
+            "Actual": "N",
+            "Observacion": "",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          },
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdPagado",
+            "Actual": "N",
+            "Observacion": "",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "estatus": [
+      {
+        "IdTipoEstatusOK": "IdEstatusPago-IdEnProceso",
+        "Actual": "N",
+        "Observacion": "",
+        "detail_row": {
+          "Activo": "S",
+          "Borrado": "N",
+          "detail_row_reg": [
+            {
+              "FechaReg": "2022-04-04T00:00:00.628Z",
+              "UsuarioReg": "FIBARRAC"
+            }
+          ]
+        }
+      },
+      {
+        "IdTipoEstatusOK": "IdEstatusPago-IdDenegado",
+        "Actual": "N",
+        "Observacion": "",
+        "detail_row": {
+          "Activo": "S",
+          "Borrado": "N",
+          "detail_row_reg": [
+            {
+              "FechaReg": "2022-04-04T00:00:00.628Z",
+              "UsuarioReg": "FIBARRAC"
+            }
+          ]
+        }
+      },
+      {
+        "IdTipoEstatusOK": "IdEstatusPago-IdAprobado",
+        "Actual": "N",
+        "Observacion": "El pago ha sido procesado y los productos están siendo preparados para el envío.",
+        "detail_row": {
+          "Activo": "S",
+          "Borrado": "N",
+          "detail_row_reg": [
+            {
+              "FechaReg": "2022-04-04T00:00:00.628Z",
+              "UsuarioReg": "FIBARRAC"
+            }
+          ]
+        }
+      },
+      {
+        "IdTipoEstatusOK": "IdEstatusPago-IdCompletado",
+        "Actual": "S",
+        "Observacion": "",
+        "detail_row": {
+          "Activo": "S",
+          "Borrado": "N",
+          "detail_row_reg": [
+            {
+              "FechaReg": "2022-04-04T00:00:00.628Z",
+              "UsuarioReg": "FIBARRAC"
+            }
+          ]
+        }
+      }
+    ],
+    "factura": [
+      {
+        "IdPersonaOK": "706",
+        "Nombre": "Roberto Perez Lopez",
+        "RFC": "USDC650325S9A",
+        "correo": "xxx@gmail.com",
+        "Telefono": "3111147163",
+        "IdTipoFacturaOK": "IdTipoFacturaOK-IdGastosMedicosHonorarios",
+        "IdTipoPago": "1, 2, 3, 4",
+        "domicilio": [
+          {
+            "IdDomicilioOK": "9001-706706706706-12345678",
+            "CalleNumero": "5 DE FEBRERO",
+            "CodPostal": "63812",
+            "Pais": "MEXICO",
+            "Estado": "NAYARIT",
+            "Municipio": "TEPIC",
+            "Localidad": "TEPIC",
+            "Colonia": "CENTRO"
+          }
+        ],
+        "productos": [
+          {
+            "IdProdServOK": "9001-123456789012",
+            "IdPresentaOK": "9001-123456789012-12345678",
+            "Cantidad": 2,
+            "PrecioUnitario": 250,
+            "descuentos": [
+              {
+                "IdTipoDescuentoOK": "IdTipoDescuento-IdProntoPago",
+                "CodigoDescuento": "DESC50",
+                "Monto": 50.49
+              },
+              {
+                "IdTipoDescuentoOK": "IdTipoDescuento-IdPromocion",
+                "CodigoDescuento": "DESC40PORC",
+                "Monto": 119.31
+              }
+            ]
+          },
+          {
+            "IdProdServOK": "9001-12345678ffff",
+            "IdPresentaOK": "9001-12345678ffff-87654321",
+            "Cantidad": 1,
+            "PrecioUnitario": 120.32,
+            "descuentos": [
+              {
+                "IdTipoDescuentoOK": "IdTipoDescuento-IdProntoPago",
+                "IdCodigoDescuento": "DESC50",
+                "Monto": 20.44
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "detail_row": {
+      "Activo": "S",
+      "Borrado": "N",
+      "detail_row_reg": [
+        {
+          "FechaReg": "2022-04-04T00:00:00.628Z",
+          "UsuarioReg": "FIBARRAC"
+        }
+      ]
+    }
+  }
+
+### PUT ITEM OK
+PUT {{api}}/OK/9002-1101-123456789012
+Content-Type: application/json
+
+{
+    "IdInstitutoOK": "9002",
+    "IdNegocioOK": "1101",
+    "IdPagoOK": "9002-1101-123456789012",
+    "IdPagoBK": "PT-60",
+    "IdOrdenOK": "9001-1101-100000000001",
+    "MontoTotal": 5000.34,
+    "Observacion": "Se actualizo",
+    "info_ad": [
+      {
+        "IdEtiquetaOK": "",
+        "IdEtiqueta": "IdCondiciones",
+        "Etiqueta": "Condiciones de Pago",
+        "Valor": "Debe ser en una sola exhibición",
+        "IdTipoSeccionOK": "IdSeccionesPago-IdGeneral",
+        "Secuencia": 10,
+        "detail_row": {
+          "Activo": "S",
+          "Borrado": "N",
+          "detail_row_reg": [
+            {
+              "FechaReg": "2022-04-30T00:00:00.628Z",
+              "UsuarioReg": "FIBARRAC"
+            }
+          ]
+        }
+      },
+      {
+        "IdEtiquetaOK": "",
+        "IdEtiqueta": "IdCondicionesPago",
+        "Etiqueta": "Condiciones de Pago",
+        "Valor": "Debe ser en una sola exhibición",
+        "IdTipoSeccionOK": "IdSeccionesPago-IdGeneral",
+        "Secuencia": 10,
+        "detail_row": {
+          "Activo": "S",
+          "Borrado": "N",
+          "detail_row_reg": [
+            {
+              "FechaReg": "2022-04-30T00:00:00.628Z",
+              "UsuarioReg": "FIBARRAC"
+            }
+          ]
+        }
+      }
+    ],
+    "forma_pago": [
+      {
+        "IdTipoMetodoOK": "IdTipoMetodoPago-IdTarjeta",
+        "Monto": 500,
+        "IdTipoMonedaOK": "IdTipoMoneda-IdMXN",
+        "pago_tarjeta": {
+          "IdTipoTarjertaOK": "IdTipoPagoTarjeta-IdCredito",
+          "IdTipoRed": "IdTipoRedTarjeta-IdVISA",
+          "Banco": "Bancomer",
+          "NombreTitular": "Francico Ibarra C",
+          "Numero": "**** **** **** 1234",
+          "FechaVencimiento": "12/25",
+          "CodigoCVV": "123"
+        },
+        "datos_transaccion": {
+          "IdTransaccion": "txn_123456789",
+          "CodigoAutoriza": "AUTH-123456",
+          "FechaReg": "2022-04-04T00:00:00.628Z"
+        },
+        "estatus": [
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdEnProceso",
+            "Actual": "N",
+            "Observacion": "",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          },
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdDenegado",
+            "Actual": "N",
+            "Observacion": "",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          },
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdAprobado",
+            "Actual": "N",
+            "Observacion": "El pago ha sido procesado y los productos están siendo preparados para el envío.",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "IdTipoMetodoOK": "IdTipoMetodoPago-IdTarjeta",
+        "Monto": 200,
+        "IdTipoMonedaOK": "IdTipoMoneda-IdMXN",
+        "pago_tarjeta": {
+          "IdTipoTarjertaOK": "IdTipoPagoTarjeta-IdDebito",
+          "IdTipoRed": "IdTipoRedTarjeta-IdVISA",
+          "Banco": "Banamex",
+          "NombreTitular": "Francico Ibarra C",
+          "Numero": "**** **** **** 1234",
+          "FechaVencimiento": "12/25",
+          "CodigoCVV": "123"
+        },
+        "datos_transaccion": {
+          "IdTransaccion": "txn_123456789",
+          "CodigoAutoriza": "AUTH-123456",
+          "FechaReg": "2022-04-04T00:00:00.628Z"
+        },
+        "estatus": [
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdEnProceso",
+            "Actual": "N",
+            "Observacion": "",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          },
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdDenegado",
+            "Actual": "N",
+            "Observacion": "",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          },
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdAprobado",
+            "Actual": "N",
+            "Observacion": "",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "datos_transaccion": {
+          "FechaReg": "2024-10-24T02:57:20.824Z"
+        },
+        "IdTipoMetodoOK": "IdTipoMetodoPago-IdEfectivo",
+        "Monto": 300,
+        "IdTipoMonedaOK": "IdTipoMoneda-IdMXN",
+        "estatus": [
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdDenegado",
+            "Actual": "N",
+            "Observacion": "",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          },
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdAprobadoContraEntrega",
+            "Actual": "N",
+            "Observacion": "",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          },
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdPagado",
+            "Actual": "N",
+            "Observacion": "",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "estatus": [
+      {
+        "IdTipoEstatusOK": "IdEstatusPago-IdEnProceso",
+        "Actual": "N",
+        "Observacion": "",
+        "detail_row": {
+          "Activo": "S",
+          "Borrado": "N",
+          "detail_row_reg": [
+            {
+              "FechaReg": "2022-04-04T00:00:00.628Z",
+              "UsuarioReg": "FIBARRAC"
+            }
+          ]
+        }
+      },
+      {
+        "IdTipoEstatusOK": "IdEstatusPago-IdDenegado",
+        "Actual": "N",
+        "Observacion": "",
+        "detail_row": {
+          "Activo": "S",
+          "Borrado": "N",
+          "detail_row_reg": [
+            {
+              "FechaReg": "2022-04-04T00:00:00.628Z",
+              "UsuarioReg": "FIBARRAC"
+            }
+          ]
+        }
+      },
+      {
+        "IdTipoEstatusOK": "IdEstatusPago-IdAprobado",
+        "Actual": "N",
+        "Observacion": "El pago ha sido procesado y los productos están siendo preparados para el envío.",
+        "detail_row": {
+          "Activo": "S",
+          "Borrado": "N",
+          "detail_row_reg": [
+            {
+              "FechaReg": "2022-04-04T00:00:00.628Z",
+              "UsuarioReg": "FIBARRAC"
+            }
+          ]
+        }
+      },
+      {
+        "IdTipoEstatusOK": "IdEstatusPago-IdCompletado",
+        "Actual": "S",
+        "Observacion": "",
+        "detail_row": {
+          "Activo": "S",
+          "Borrado": "N",
+          "detail_row_reg": [
+            {
+              "FechaReg": "2022-04-04T00:00:00.628Z",
+              "UsuarioReg": "FIBARRAC"
+            }
+          ]
+        }
+      }
+    ],
+    "factura": [
+      {
+        "IdPersonaOK": "706",
+        "Nombre": "Roberto Perez Lopez",
+        "RFC": "USDC650325S9A",
+        "correo": "xxx@gmail.com",
+        "Telefono": "3111147163",
+        "IdTipoFacturaOK": "IdTipoFacturaOK-IdGastosMedicosHonorarios",
+        "IdTipoPago": "1, 2, 3, 4",
+        "domicilio": [
+          {
+            "IdDomicilioOK": "9001-706706706706-12345678",
+            "CalleNumero": "5 DE FEBRERO",
+            "CodPostal": "63812",
+            "Pais": "MEXICO",
+            "Estado": "NAYARIT",
+            "Municipio": "TEPIC",
+            "Localidad": "TEPIC",
+            "Colonia": "CENTRO"
+          }
+        ],
+        "productos": [
+          {
+            "IdProdServOK": "9001-123456789012",
+            "IdPresentaOK": "9001-123456789012-12345678",
+            "Cantidad": 2,
+            "PrecioUnitario": 250,
+            "descuentos": [
+              {
+                "IdTipoDescuentoOK": "IdTipoDescuento-IdProntoPago",
+                "CodigoDescuento": "DESC50",
+                "Monto": 50.49
+              },
+              {
+                "IdTipoDescuentoOK": "IdTipoDescuento-IdPromocion",
+                "CodigoDescuento": "DESC40PORC",
+                "Monto": 119.31
+              }
+            ]
+          },
+          {
+            "IdProdServOK": "9001-12345678ffff",
+            "IdPresentaOK": "9001-12345678ffff-87654321",
+            "Cantidad": 1,
+            "PrecioUnitario": 120.32,
+            "descuentos": [
+              {
+                "IdTipoDescuentoOK": "IdTipoDescuento-IdProntoPago",
+                "IdCodigoDescuento": "DESC50",
+                "Monto": 20.44
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "detail_row": {
+      "Activo": "S",
+      "Borrado": "N",
+      "detail_row_reg": [
+        {
+          "FechaReg": "2022-04-04T00:00:00.628Z",
+          "UsuarioReg": "FIBARRAC"
+        }
+      ]
+    }
+  }
+
+### PUT ITEM BK
+PUT {{api}}/BK/PT-60
+Content-Type: application/json
+
+{
+    "IdInstitutoOK": "9002",
+    "IdNegocioOK": "1101",
+    "IdPagoOK": "9002-1101-123456789012",
+    "IdPagoBK": "PT-60",
+    "IdOrdenOK": "9001-1101-100000000001",
+    "MontoTotal": 5000.34,
+    "Observacion": "Funciona de maravilla",
+    "info_ad": [
+      {
+        "IdEtiquetaOK": "",
+        "IdEtiqueta": "IdCondiciones",
+        "Etiqueta": "Condiciones de Pago",
+        "Valor": "Debe ser en una sola exhibición",
+        "IdTipoSeccionOK": "IdSeccionesPago-IdGeneral",
+        "Secuencia": 10,
+        "detail_row": {
+          "Activo": "S",
+          "Borrado": "N",
+          "detail_row_reg": [
+            {
+              "FechaReg": "2022-04-30T00:00:00.628Z",
+              "UsuarioReg": "FIBARRAC"
+            }
+          ]
+        }
+      },
+      {
+        "IdEtiquetaOK": "",
+        "IdEtiqueta": "IdCondicionesPago",
+        "Etiqueta": "Condiciones de Pago",
+        "Valor": "Debe ser en una sola exhibición",
+        "IdTipoSeccionOK": "IdSeccionesPago-IdGeneral",
+        "Secuencia": 10,
+        "detail_row": {
+          "Activo": "S",
+          "Borrado": "N",
+          "detail_row_reg": [
+            {
+              "FechaReg": "2022-04-30T00:00:00.628Z",
+              "UsuarioReg": "FIBARRAC"
+            }
+          ]
+        }
+      }
+    ],
+    "forma_pago": [
+      {
+        "IdTipoMetodoOK": "IdTipoMetodoPago-IdTarjeta",
+        "Monto": 500,
+        "IdTipoMonedaOK": "IdTipoMoneda-IdMXN",
+        "pago_tarjeta": {
+          "IdTipoTarjertaOK": "IdTipoPagoTarjeta-IdCredito",
+          "IdTipoRed": "IdTipoRedTarjeta-IdVISA",
+          "Banco": "Bancomer",
+          "NombreTitular": "Francico Ibarra C",
+          "Numero": "**** **** **** 1234",
+          "FechaVencimiento": "12/25",
+          "CodigoCVV": "123"
+        },
+        "datos_transaccion": {
+          "IdTransaccion": "txn_123456789",
+          "CodigoAutoriza": "AUTH-123456",
+          "FechaReg": "2022-04-04T00:00:00.628Z"
+        },
+        "estatus": [
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdEnProceso",
+            "Actual": "N",
+            "Observacion": "",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          },
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdDenegado",
+            "Actual": "N",
+            "Observacion": "",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          },
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdAprobado",
+            "Actual": "N",
+            "Observacion": "El pago ha sido procesado y los productos están siendo preparados para el envío.",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "IdTipoMetodoOK": "IdTipoMetodoPago-IdTarjeta",
+        "Monto": 200,
+        "IdTipoMonedaOK": "IdTipoMoneda-IdMXN",
+        "pago_tarjeta": {
+          "IdTipoTarjertaOK": "IdTipoPagoTarjeta-IdDebito",
+          "IdTipoRed": "IdTipoRedTarjeta-IdVISA",
+          "Banco": "Banamex",
+          "NombreTitular": "Francico Ibarra C",
+          "Numero": "**** **** **** 1234",
+          "FechaVencimiento": "12/25",
+          "CodigoCVV": "123"
+        },
+        "datos_transaccion": {
+          "IdTransaccion": "txn_123456789",
+          "CodigoAutoriza": "AUTH-123456",
+          "FechaReg": "2022-04-04T00:00:00.628Z"
+        },
+        "estatus": [
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdEnProceso",
+            "Actual": "N",
+            "Observacion": "",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          },
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdDenegado",
+            "Actual": "N",
+            "Observacion": "",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          },
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdAprobado",
+            "Actual": "N",
+            "Observacion": "",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "datos_transaccion": {
+          "FechaReg": "2024-10-24T02:57:20.824Z"
+        },
+        "IdTipoMetodoOK": "IdTipoMetodoPago-IdEfectivo",
+        "Monto": 300,
+        "IdTipoMonedaOK": "IdTipoMoneda-IdMXN",
+        "estatus": [
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdDenegado",
+            "Actual": "N",
+            "Observacion": "",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          },
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdAprobadoContraEntrega",
+            "Actual": "N",
+            "Observacion": "",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          },
+          {
+            "IdTipoEstatusOK": "IdEstatusPago-IdPagado",
+            "Actual": "N",
+            "Observacion": "",
+            "detail_row": {
+              "Activo": "S",
+              "Borrado": "N",
+              "detail_row_reg": [
+                {
+                  "FechaReg": "2022-04-04T00:00:00.628Z",
+                  "UsuarioReg": "FIBARRAC"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "estatus": [
+      {
+        "IdTipoEstatusOK": "IdEstatusPago-IdEnProceso",
+        "Actual": "N",
+        "Observacion": "",
+        "detail_row": {
+          "Activo": "S",
+          "Borrado": "N",
+          "detail_row_reg": [
+            {
+              "FechaReg": "2022-04-04T00:00:00.628Z",
+              "UsuarioReg": "FIBARRAC"
+            }
+          ]
+        }
+      },
+      {
+        "IdTipoEstatusOK": "IdEstatusPago-IdDenegado",
+        "Actual": "N",
+        "Observacion": "",
+        "detail_row": {
+          "Activo": "S",
+          "Borrado": "N",
+          "detail_row_reg": [
+            {
+              "FechaReg": "2022-04-04T00:00:00.628Z",
+              "UsuarioReg": "FIBARRAC"
+            }
+          ]
+        }
+      },
+      {
+        "IdTipoEstatusOK": "IdEstatusPago-IdAprobado",
+        "Actual": "N",
+        "Observacion": "El pago ha sido procesado y los productos están siendo preparados para el envío.",
+        "detail_row": {
+          "Activo": "S",
+          "Borrado": "N",
+          "detail_row_reg": [
+            {
+              "FechaReg": "2022-04-04T00:00:00.628Z",
+              "UsuarioReg": "FIBARRAC"
+            }
+          ]
+        }
+      },
+      {
+        "IdTipoEstatusOK": "IdEstatusPago-IdCompletado",
+        "Actual": "S",
+        "Observacion": "",
+        "detail_row": {
+          "Activo": "S",
+          "Borrado": "N",
+          "detail_row_reg": [
+            {
+              "FechaReg": "2022-04-04T00:00:00.628Z",
+              "UsuarioReg": "FIBARRAC"
+            }
+          ]
+        }
+      }
+    ],
+    "factura": [
+      {
+        "IdPersonaOK": "706",
+        "Nombre": "Roberto Perez Lopez",
+        "RFC": "USDC650325S9A",
+        "correo": "xxx@gmail.com",
+        "Telefono": "3111147163",
+        "IdTipoFacturaOK": "IdTipoFacturaOK-IdGastosMedicosHonorarios",
+        "IdTipoPago": "1, 2, 3, 4",
+        "domicilio": [
+          {
+            "IdDomicilioOK": "9001-706706706706-12345678",
+            "CalleNumero": "5 DE FEBRERO",
+            "CodPostal": "63812",
+            "Pais": "MEXICO",
+            "Estado": "NAYARIT",
+            "Municipio": "TEPIC",
+            "Localidad": "TEPIC",
+            "Colonia": "CENTRO"
+          }
+        ],
+        "productos": [
+          {
+            "IdProdServOK": "9001-123456789012",
+            "IdPresentaOK": "9001-123456789012-12345678",
+            "Cantidad": 2,
+            "PrecioUnitario": 250,
+            "descuentos": [
+              {
+                "IdTipoDescuentoOK": "IdTipoDescuento-IdProntoPago",
+                "CodigoDescuento": "DESC50",
+                "Monto": 50.49
+              },
+              {
+                "IdTipoDescuentoOK": "IdTipoDescuento-IdPromocion",
+                "CodigoDescuento": "DESC40PORC",
+                "Monto": 119.31
+              }
+            ]
+          },
+          {
+            "IdProdServOK": "9001-12345678ffff",
+            "IdPresentaOK": "9001-12345678ffff-87654321",
+            "Cantidad": 1,
+            "PrecioUnitario": 120.32,
+            "descuentos": [
+              {
+                "IdTipoDescuentoOK": "IdTipoDescuento-IdProntoPago",
+                "IdCodigoDescuento": "DESC50",
+                "Monto": 20.44
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "detail_row": {
+      "Activo": "S",
+      "Borrado": "N",
+      "detail_row_reg": [
+        {
+          "FechaReg": "2022-04-04T00:00:00.628Z",
+          "UsuarioReg": "FIBARRAC"
+        }
+      ]
+    }
+  }
+
+### DELETE CON OK/BK
+DELETE {{api}}/PT-60?keyType=BK

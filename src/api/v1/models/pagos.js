@@ -1,7 +1,7 @@
 import * as mongoose from 'mongoose';
 
 const pagosSchema = new mongoose.Schema({
-    IdInstitutoPK: { type : String, required : true },
+    IdInstitutoOK: { type : String, required : true },
     IdNegocioOK: { type : String},
     IdPagoOK: { type : String },
     IdPagoBK: { type : String },

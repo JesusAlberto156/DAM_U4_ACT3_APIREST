@@ -37,3 +37,78 @@ export const getPagosItem = async (req, res, next) => {
     next(error);
   }
 };
+
+//API POST.
+
+//POST (ADD) PAGOS
+export const postDatosItem = async (req, res, next) => {
+  try {
+    const pagosItem = req.body;
+    const newPagosItem = await Pagos.postPagosItem(pagosItem);
+    if (!newPagosItem) {
+      throw boom.badRequest('No se pudo crear el nuevo Pago con sus datos.');
+    } else if (newPagosItem) {
+      res.status(201).json(newPagosItem);
+    }
+  } catch (error) {
+    console.log(error);
+    next(error);
+  }
+};
+
+//API PUT.
+
+//PUT (UPDATE) PAGOS POR OK
+export const putPagosItemOK = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+  
+    const pagosItem = req.body;
+      
+    const updatedPagosItem = await Pagos.putPagosItemOK(id, pagosItem );
+    if (!updatedPagosItem) {
+      throw boom.badRequest('No se pudo actualizar los datos del Pago.');
+    } else if (updatedPagosItem) {
+      res.status(200).json(updatedPagosItem);
+    }
+  } catch (error) {
+    next(error);
+  }
+};
+//PUT (UPDATE) PAGOS POR BK
+export const putPagosItemBK = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+  
+    const pagosItem = req.body;
+      
+    const updatedPagosItem = await Pagos.putPagosItemBK(id, pagosItem );
+    if (!updatedPagosItem) {
+      throw boom.badRequest('No se pudo actualizar los datos del Pago.');
+    } else if (updatedPagosItem) {
+      res.status(200).json(updatedPagosItem);
+    }
+  } catch (error) {
+    next(error);
+  }
+};
+
+//API DELETE.
+
+//DELETE PAGOS POR OK/BK
+export const deletePagosItem = async (req, res, next) => {
+  try {
+
+    const { id } = req.params;
+
+    const keyType = req.query.keyType || 'OK';
+    const deletedPagosItem = await Pagos.deletePagosItem(id,keyType);
+    if (!deletePagosItem) {
+      throw boom.notFound('No se pudo eliminar los datos del Pago.');
+    } else {
+      res.status(200).json(deletedPagosItem);
+    }
+  } catch (error) {
+    next(error); // Manejo de errores
+  }
+};

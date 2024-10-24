@@ -32,3 +32,54 @@ export const getPagosItem = async (id, keyType) => {
       throw boom.internal(error);
     }
 };
+
+// POST (ADD) PAGOS
+
+export const postPagosItem = async (pagosItem) => {
+  try {
+    const newPagosItem = new pagos(pagosItem);
+    return await newPagosItem.save();
+  } catch (error) {
+    throw error;
+  }
+};
+
+// PUT (UPDATE) PAGOS POR OK
+
+export const putPagosItemOK = async (id, pagosItem) => {
+  try {
+    return await pagos.findOneAndUpdate({ IdPagoOK: id }, pagosItem, {
+    new: true,
+  });
+  } catch (error) {
+    throw boom.badImplementation(error);
+  }
+};
+
+// PUT (UPDATE) PAGOS POR BK
+
+export const putPagosItemBK = async (id, pagosItem) => {
+  try {
+    return await pagos.findOneAndUpdate({ IdPagoBK: id }, pagosItem, {
+    new: true,
+  });
+  } catch (error) {
+    throw boom.badImplementation(error);
+  }
+};
+
+// DELETE PAGOS POR OK/BK
+
+export const deletePagosItem = async (id,keyType) => {
+  try {
+    if(keyType === "OK"){
+      const result = await pagos.findOneAndDelete(id);
+      return result;
+    }else if(keyType === "BK"){
+      const result = await pagos.findOneAndDelete(id);
+      return result;
+    }
+  } catch (error) {
+    throw boom.badImplementation(error);
+  }
+};
